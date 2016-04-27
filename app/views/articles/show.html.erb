@@ -1,0 +1,16 @@
+<h2><%= @article.title %></h2>
+ 
+<p>
+  <%= @article.text %>
+</p>
+
+<h3>コメント</h3>
+<%= render @article.comments %>
+
+<h3>コメントを追加する</h3>
+<%= render "comments/form" %>
+
+<hr>
+
+<p><%= link_to '戻る', articles_path %> | <%= link_to '編集', edit_article_path(@article) %></p>
+

@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title"> <%= comment.commenter %> </h3>
+  </div>
+  <div class="panel-body">
+    <p>
+      <%= comment.body %>
+    </p>
+
+    <p>
+      <%= link_to '削除', [comment.article, comment],
+                   method: :delete,
+                   data: { confirm: '本当に削除しますか？'},
+                   class: 'btn btn-default pull-right' %>
+    </p>
+  </div>
+</div>
